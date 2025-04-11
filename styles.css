@@ -35,19 +35,16 @@ h1 {
   padding: 0 1rem;
 }
 
-/* 1 column by default */
 .flex {
   grid-template-columns: repeat(1, 1fr);
 }
 
-/* 2 columns on medium screens */
 @media (min-width: 600px) {
   .flex {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* 3 columns on large screens */
 @media (min-width: 992px) {
   .flex {
     grid-template-columns: repeat(3, 1fr);
@@ -61,6 +58,7 @@ h1 {
   padding: 1rem;
   width: 100%;
   max-width: 250px;
+  text-align: center;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -122,7 +120,6 @@ button:disabled {
   color: #333;
 }
 
-/* User Profile Page */
 #user-profile {
   display: flex;
   justify-content: center;
@@ -137,39 +134,65 @@ button:disabled {
   padding: 2.5rem 2rem;
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  max-width: 400px;
+  max-width: 600px;
   text-align: center;
   width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.profile-card:hover {
+  transform: translateY(-10px); 
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); 
+}
+
+
 .profile-card img {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.profile-card h2 {
-  margin: 0 0 0.5rem;
-  font-size: 1.8rem;
-  color: #222;
-}
-
-.profile-card p {
-  font-size: 1.05rem;
-  color: #555;
+.profile-card .info {
+  text-align: left;
   margin-bottom: 1.5rem;
 }
 
+.field {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  margin-bottom: 1rem;
+}
+
+.field label {
+  font-weight: bold;
+  color: #333;
+  margin-right: 1rem; 
+}
+
+.field span {
+  color: #555;
+  font-size: 1.05rem;
+  flex-grow: 1; 
+}
+
+
 .back-link {
   text-decoration: none;
-  color: #007bff;
+  background-color: #007bff;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
   font-weight: 500;
   transition: color 0.2s ease;
+  display: inline-block;
+  margin-top: 1rem;
 }
 
 .back-link:hover {
-  color: #0056b3;
+  font-weight: 700;
 }

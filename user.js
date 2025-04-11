@@ -21,9 +21,21 @@ if (!userId) {
 
       profileCard.innerHTML = `
         <img src="${user.avatar}" alt="${user.first_name}" />
-        <h2>${user.first_name} ${user.last_name}</h2>
-        <p>${user.email}</p>
-        <a class="back-link" href="index.html">← Back to gallery</a>
+          <div class="info">
+            <div class="field">
+              <label>First Name:</label>
+              <span>${user.first_name}</span>
+            </div>
+            <div class="field">
+              <label>Last Name:</label>
+              <span>${user.last_name}</span>
+            </div>
+            <div class="field">
+              <label>Email:</label>
+              <span>${user.email}</span>
+            </div>
+          </div>
+          <a class="back-link" href="index.html">← Back to gallery</a>
       `;
 
       container.appendChild(profileCard);
