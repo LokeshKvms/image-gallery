@@ -1,1 +1,1 @@
-# [IMAGE GALLERY](lokeshkvms.github.io/image-gallery)
+# [IMAGE GALLERY](https://lokeshkvms.github.io/image-gallery/)
